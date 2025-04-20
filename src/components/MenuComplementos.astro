@@ -1,0 +1,35 @@
+---
+// Complementos del menú
+const complementos = [
+  "Chocolate",
+  "Crema de Cacahuate",
+  "Chantilly",
+  "Cajeta",
+  "Lechera",
+  "Mermeladas",
+  "Nutella",
+  "Philadelphia",
+  "Almendras",
+  "Fresa",
+  "Durazno",
+  "Plátano",
+];
+
+// Imagen de ejemplo (puedes reemplazarla por otra en public/)
+const imagenComplementos = "/DulceDelicia-images-3.png";
+---
+
+<section class="max-w-3xl mx-auto mt-10 p-6 bg-white rounded-lg shadow-md flex flex-col md:flex-row md:items-stretch gap-6">
+  <div class="md:w-72 w-full flex justify-center self-center md:h-full p-2 order-1 md:order-none">
+    <img src={imagenComplementos} alt="Complementos" class="md:h-full md:w-72 w-48 h-48 object-cover rounded-2xl shadow-lg bg-green-50" />
+  </div>
+  <div class="flex-1">
+    <h2 class="text-2xl font-bold mb-4 text-green-700">Complementos</h2>
+    <div class="text-right text-lg text-gray-500 mt-4">$10.00 c/u</div>
+    <ul class="grid grid-cols-2 gap-x-4 gap-y-2">
+      {complementos.map(item => (
+        <li class="text-base text-gray-700">{item}</li>
+      ))}
+    </ul>
+  </div>
+</section>

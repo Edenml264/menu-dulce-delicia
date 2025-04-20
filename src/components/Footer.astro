@@ -1,0 +1,21 @@
+---
+// Datos de contacto y horario
+const horario = "Abierto de 6:00 pm - 11:00 pm";
+const telefono = "55 1234 5678"; // Puedes cambiarlo por el real
+const whatsapp = "https://wa.me/525512345678"; // Link directo a WhatsApp
+---
+
+<footer class="w-full mt-12 py-6 text-center text-yellow-900 text-base rounded-t-xl shadow-inner">
+  <div class="mb-2 flex flex-col md:flex-row justify-center items-center gap-4">
+    <span class="inline-flex items-center gap-2">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-700" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3" /></svg>
+      {horario}
+    </span>
+    <span class="hidden md:inline">|</span>
+    <span class="inline-flex items-center gap-2">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a2 2 0 011.94 1.52l.3 1.2a2 2 0 01-1.09 2.31l-.88.44a11.05 11.05 0 005.1 5.1l.44-.88a2 2 0 012.31-1.09l1.2.3A2 2 0 0121 16.72V19a2 2 0 01-2 2h-1C9.163 21 3 14.837 3 7V5z" /></svg>
+      <a href={whatsapp} class="underline hover:text-green-700 transition-colors" target="_blank" rel="noopener noreferrer">{telefono} (WhatsApp)</a>
+    </span>
+  </div>
+  <div class="text-xs text-yellow-700">&copy; {new Date().getFullYear()} Dulce Delicia. Todos los derechos reservados.</div>
+</footer>

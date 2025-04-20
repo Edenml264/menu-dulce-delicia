@@ -1,0 +1,53 @@
+---
+// Especiales del menú
+const especiales = [
+  {
+    nombre: "Surtidita",
+    descripcion: "Fresa, Plátano, Lechera y Chantilly",
+    precio: 90,
+  },
+  {
+    nombre: "Eclipse",
+    descripcion: "Chocolate, Philadelphia, Cereza y Almendra",
+    precio: 90,
+  },
+  {
+    nombre: "Rufina",
+    descripcion: "Fresa, Durazno, Plátano, Lechera y Nutella",
+    precio: 95,
+  },
+  {
+    nombre: "Enigma",
+    descripcion: "Fresa, Plátano, Philadelphia, Chantilly y Nutella",
+    precio: 95,
+  },
+  {
+    nombre: "Dulce Delicia",
+    descripcion: "Pay de Queso con mermelada de Frutos Rojos",
+    precio: 110,
+  },
+];
+
+// Imagen de ejemplo (puedes reemplazarla por otra en public/)
+const imagenEspeciales = "/DulceDelicia-images-2.png";
+---
+
+<section class="max-w-3xl mx-auto mt-10 p-6 bg-white rounded-lg shadow-md flex flex-col md:flex-row md:items-stretch gap-6">
+  <div class="flex-1">
+    <h2 class="text-2xl font-bold mb-4 text-pink-700">Especiales</h2>
+    <ul>
+      {especiales.map(item => (
+        <li class="flex justify-between items-start py-3 border-b border-gray-100 last:border-b-0">
+          <div>
+            <div class="text-lg font-semibold text-gray-800">{item.nombre}</div>
+            <div class="text-sm text-gray-500">{item.descripcion}</div>
+          </div>
+          <span class="text-lg font-bold text-pink-700">${item.precio}.00</span>
+        </li>
+      ))}
+    </ul>
+  </div>
+  <div class="md:w-72 w-full flex justify-center self-center md:h-full p-2">
+    <img src={imagenEspeciales} alt="Especiales" class="md:h-full md:w-72 w-48 h-48 object-cover rounded-2xl shadow-lg bg-pink-50" />
+  </div>
+</section>
