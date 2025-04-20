@@ -1,5 +1,3 @@
-import { Config } from 'tailwindcss';
-
 export default {
   content: [
     './src/**/*.{astro,html,js,jsx,ts,tsx,vue,svelte}',
@@ -9,4 +7,4 @@ export default {
     extend: {},
   },
   plugins: [],
-} satisfies Config;
+};
